@@ -9,3 +9,5 @@ RUN apt update && \
     service polipo restart
 
 CMD ["python", "/shadowsocksr/shadowsocks/local.py", "-c", "/config.json", "-d", "start"] 
+
+ENTRYPOINT ["/bin/bash"]
