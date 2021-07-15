@@ -8,6 +8,4 @@ RUN apt update && \
     echo "socksParentProxy = 127.0.0.1:1080" >> /etc/polipo/config && \
     service polipo restart
 
-CMD ["python", "/shadowsocksr/shadowsocks/local.py", "-c", "/config.json", "-d", "start"] 
-
-ENTRYPOINT ["/bin/bash"]
+ENTRYPOINT ["python", "/shadowsocksr/shadowsocks/local.py", "-c", "/config.json", "-d", "start"] 
